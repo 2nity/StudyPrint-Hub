@@ -20,7 +20,6 @@ StudyPrint-Hub/
     └── poster.jpg      # Video player poster thumbnail
 ```
 
----
 
 ## 🛠️ How HTML, CSS, and PyScript Work Together
 
@@ -36,43 +35,5 @@ StudyPrint-Hub/
 3. **`main.py`**:
    - Maintains the centralized `SERVICES_DATA` dictionary.
    - Implements `@when` decorators and global Python functions for live search filtering, service selection, quantity stepping, price calculation, validation, form handling, and modal receipt generation.
-
----
-
-## 📽️ Configuring the Promotional Video
-
-The promotional video is embedded **exclusively on the Home / Landing Page**.
-
-To add your group's commercial:
-1. Place your MP4 video file inside the `assets/` directory.
-2. Name the file `promo.mp4` (Target path: `assets/promo.mp4`).
-3. Reload `index.html`. The video player will load `assets/promo.mp4` with `assets/poster.jpg` as thumbnail.
-
----
-
-## 💻 How to Run locally in VS Code
-
-You can host the project locally using Python's built-in HTTP server:
-
-1. Open VS Code in the `StudyPrint-Hub` root folder.
-2. Open the integrated terminal and run:
-   ```bash
-   python -m http.server 8000
-   ```
-3. Open your browser and navigate to:
-   ```text
-   http://localhost:8000
-   ```
-
----
-
-## 🌐 Deploying to GitHub Pages
-
-1. Commit and push all files (`index.html`, `style.css`, `main.py`, `README.md`, `.gitignore`, `assets/`) to your GitHub repository.
-2. Navigate to **Settings** > **Pages** in your repository.
-3. Under **Branch**, select `main` (or `master`) and folder `/ (root)`.
-4. Click **Save**. GitHub Pages will publish the static PyScript website at your repository URL.
-
----
 
 *EVD & Business Analytics Final Exam Project 2026 — StudyPrint Hub*
