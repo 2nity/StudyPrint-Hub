@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sph-grad-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#173B63"/>
+      <stop offset="100%" stop-color="#3478C7"/>
+    </linearGradient>
+    <linearGradient id="sph-grad-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFC857"/>
+      <stop offset="100%" stop-color="#FFD97D"/>
+    </linearGradient>
+    <filter id="sph-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#173B63" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- ICON GROUP -->
+  <g transform="translate(15, 10)">
+    <!-- Base Glow / Background badge -->
+    <rect x="0" y="0" width="100" height="100" rx="22" fill="url(#sph-grad-primary)" filter="url(#sph-shadow)"/>
+    
+    <!-- Top Paper Sheet feeding into printer -->
+    <path d="M35 18 H65 C67.2 18 69 19.8 69 22 V42 H31 V22 C31 19.8 32.8 18 35 18 Z" fill="#F7F9FC" opacity="0.9"/>
+    <!-- Lines on Top Paper -->
+    <line x1="39" y1="26" x2="61" y2="26" stroke="#3478C7" stroke-width="2" stroke-linecap="round"/>
+    <line x1="39" y1="32" x2="55" y2="32" stroke="#3478C7" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- Main Printer Body -->
+    <rect x="18" y="38" width="64" height="34" rx="8" fill="#FFFFFF"/>
+    <!-- Accent Line on Printer -->
+    <rect x="18" y="48" width="64" height="4" fill="url(#sph-grad-accent)"/>
+    
+    <!-- Status Light & Buttons -->
+    <circle cx="28" cy="44" r="2.5" fill="#3478C7"/>
+    <circle cx="35" cy="44" r="2.5" fill="#FFC857"/>
+    <rect x="64" y="43" width="10" height="3" rx="1.5" fill="#173B63"/>
+
+    <!-- Output Paper Sheet emerging from slot -->
+    <path d="M26 64 H74 V80 C74 82.2 72.2 84 70 84 H30 C27.8 84 26 82.2 26 80 Z" fill="#F7F9FC" filter="url(#sph-shadow)"/>
+    <!-- Document details on printed sheet -->
+    <line x1="32" y1="70" x2="68" y2="70" stroke="#173B63" stroke-width="2" stroke-linecap="round"/>
+    <line x1="32" y1="75" x2="58" y2="75" stroke="#3478C7" stroke-width="2" stroke-linecap="round"/>
+    <!-- Checkmark / Quality star badge -->
+    <circle cx="63" cy="76" r="5" fill="#FFC857"/>
+    <path d="M60.5 76 L62.3 77.8 L65.5 74.5" stroke="#173B63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- TEXT BRAND GROUP -->
+  <g transform="translate(130, 0)">
+    <!-- Primary Brand Title -->
+    <text x="0" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="38" font-weight="900" fill="#173B63" letter-spacing="-0.5">
+      StudyPrint<tspan fill="#3478C7"> Hub</tspan>
+    </text>
+    
+    <!-- Tagline Badge -->
+    <rect x="0" y="74" width="280" height="24" rx="6" fill="#173B63" opacity="0.06"/>
+    <text x="10" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#3478C7" letter-spacing="1.5">
+      STUDENT &amp; DOCUMENT SERVICES
+    </text>
+
+    <!-- Accent Dot -->
+    <circle cx="320" cy="52" r="6" fill="#FFC857"/>
+  </g>
+</svg>

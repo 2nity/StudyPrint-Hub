@@ -1,0 +1,231 @@
+/* ==========================================================================
+   STUDYPRINT HUB — PROFESSIONAL BRAND & WEBSITE STYLESHEET
+   EVD and Business Analytics Final Exam Project 2026
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. COLOR PALETTE & CSS VARIABLES
+   -------------------------------------------------------------------------- */
+:root {
+    --brand-navy: #173B63;
+    --brand-navy-dark: #0f2844;
+    --brand-blue: #3478C7;
+    --brand-blue-light: #5292de;
+    --brand-yellow: #FFC857;
+    --brand-yellow-hover: #f5b938;
+    --brand-bg: #F7F9FC;
+    --brand-text-main: #1F2937;
+    --brand-text-muted: #64748B;
+    --brand-card-bg: #FFFFFF;
+    --brand-border: #E2E8F0;
+    --shadow-soft: 0 10px 25px -5px rgba(23, 59, 99, 0.08), 0 8px 10px -6px rgba(23, 59, 99, 0.04);
+    --shadow-hover: 0 20px 30px -10px rgba(23, 59, 99, 0.15), 0 10px 15px -5px rgba(23, 59, 99, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   2. GLOBAL RESET & BASE TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--brand-text-main);
+    background-color: var(--brand-bg);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-blue);
+}
+
+/* --------------------------------------------------------------------------
+   3. HEADER & NAVIGATION STYLES
+   -------------------------------------------------------------------------- */
+.glass-header {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    transition: all 0.3s ease;
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--brand-blue);
+    transition: all 0.25s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+/* --------------------------------------------------------------------------
+   4. HERO & HOME SECTION STYLES
+   -------------------------------------------------------------------------- */
+.gradient-hero {
+    background: linear-gradient(135deg, #173B63 0%, #1c487a 45%, #3478C7 100%);
+    position: relative;
+}
+
+.gradient-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(255, 200, 87, 0.12) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Video Player Box Styling */
+.video-wrapper {
+    box-shadow: 0 25px 50px -12px rgba(15, 40, 68, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* --------------------------------------------------------------------------
+   5. SERVICE CARDS & SEARCH/FILTER BAR
+   -------------------------------------------------------------------------- */
+.service-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--brand-border);
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(52, 120, 199, 0.3);
+}
+
+.cat-chip {
+    transition: all 0.2s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cat-chip.active-chip {
+    background-color: var(--brand-blue) !important;
+    color: #FFFFFF !important;
+    border-color: var(--brand-blue) !important;
+    box-shadow: 0 4px 12px rgba(52, 120, 199, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   6. CALCULATOR & FORM STYLES
+   -------------------------------------------------------------------------- */
+.calc-card-dark {
+    background: linear-gradient(145deg, #173B63 0%, #112d47 100%);
+    box-shadow: 0 20px 40px rgba(23, 59, 99, 0.2);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--brand-blue);
+    box-shadow: 0 0 0 3px rgba(52, 120, 199, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   7. BUTTONS & INTERACTIVE STATES
+   -------------------------------------------------------------------------- */
+.btn-primary {
+    background-color: var(--brand-yellow);
+    color: var(--brand-navy);
+    font-weight: 800;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(255, 200, 87, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--brand-yellow-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(255, 200, 87, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-navy {
+    background-color: var(--brand-navy);
+    color: #FFFFFF;
+    transition: all 0.2s ease;
+}
+
+.btn-navy:hover {
+    background-color: var(--brand-blue);
+}
+
+/* --------------------------------------------------------------------------
+   8. MODAL & PRINT STYLES
+   -------------------------------------------------------------------------- */
+#receipt-modal {
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #receipt-modal, #receipt-modal * {
+        visibility: visible;
+    }
+    #receipt-modal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        background: white;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   9. ACCESSIBILITY & FOCUS VISIBILITY
+   -------------------------------------------------------------------------- */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--brand-yellow);
+    outline-offset: 2px;
+}

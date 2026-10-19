@@ -1,0 +1,19 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor Folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node / Python Cache (If any tools run locally)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local logs
+*.log
