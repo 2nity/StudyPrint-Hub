@@ -1,7 +1,3 @@
-# ==========================================================================
-# STUDYPRINT HUB — MAIN PYTHON & PYSCRIPT LOGIC (EXAM PROJECT 2026)
-# ==========================================================================
-
 import random
 import datetime
 from pyscript import document, window, when

@@ -153,22 +153,16 @@
 
                             <!-- HTML5 Video Element -->
                             <div class="relative rounded-2xl overflow-hidden bg-slate-950 aspect-video shadow-inner flex items-center justify-center">
-                                <video id="promo-video-player" controls preload="metadata" class="w-full h-full object-cover rounded-2xl" poster="assets/poster.jpg">
-                                    <source src="c:\Users\LENOVO\Downloads\advertisement.mp4" type="video/mp4">
-                                    Your browser does not support HTML video.
+                                <video
+                                    id="promo-video-player"
+                                    controls
+                                    playsinline
+                                    preload="metadata"
+                                    class="block w-full h-full object-contain rounded-2xl bg-black"
+                                    aria-label="StudyPrint Hub student-created video advertisement">
+                                    <source src="assets/advertisement.mp4" type="video/mp4">
+                                    Your browser does not support HTML video playback.
                                 </video>
-
-                                <!-- Fallback display overlay if promo.mp4 is not uploaded yet -->
-                                <div id="video-fallback-notice" class="absolute inset-0 bg-slate-900/90 text-white flex flex-col items-center justify-center p-6 text-center pointer-events-none transition-opacity duration-300">
-                                    <div class="w-12 h-12 rounded-full bg-[#FFC857]/20 text-[#FFC857] flex items-center justify-center mb-3">
-                                        <i class="fa-solid fa-film text-xl"></i>
-                                    </div>
-                                    <h4 class="font-bold text-sm text-yellow-300 mb-1">Promotional Video Slot Ready</h4>
-                                    <p class="text-xs text-slate-300 leading-relaxed max-w-xs">
-                                        Target Path: <code class="bg-slate-800 text-yellow-200 px-1 py-0.5 rounded text-[11px]">assets/promo.mp4</code><br>
-                                        Drop group MP4 commercial file at this path to replace this frame.
-                                    </p>
-                                </div>
                             </div>
 
                             <p class="mt-3 text-center text-xs text-slate-300 italic">
@@ -1177,7 +1171,7 @@
     </div>
 
 
-    <!-- BROWSER UI GLUE (Mobile Drawer, Dropzone, Video Fallback Listener) -->
+    <!-- BROWSER UI GLUE (Mobile Drawer and Dropzone) -->
     <script>
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -1214,17 +1208,6 @@
             });
         }
 
-        const promoVideo = document.getElementById('promo-video-player');
-        const fallbackNotice = document.getElementById('video-fallback-notice');
-
-        if (promoVideo && fallbackNotice) {
-            promoVideo.addEventListener('loadedmetadata', () => {
-                fallbackNotice.classList.add('opacity-0', 'pointer-events-none');
-            });
-            promoVideo.addEventListener('playing', () => {
-                fallbackNotice.classList.add('opacity-0', 'pointer-events-none');
-            });
-        }
     </script>
 
 </body>
