@@ -16,7 +16,7 @@ StudyPrint-Hub/
 ├── .gitignore          # Version control exclusion rules
 └── assets/
     ├── logo.svg        # Original vector brand logo (Printer + Wordmark)
-    ├── adverisement.mp4       # Group advertisement video slot
+    ├── adverisement.mp4# Group advertisement video slot
     └── poster.jpg      # Video player poster thumbnail
 ```
 
