@@ -1,10 +1,7 @@
 import random
 import datetime
 from pyscript import document, window, when
-
-# --------------------------------------------------------------------------
 # 1. CENTRALIZED SERVICE PRICING & CATEGORY DATA
-# --------------------------------------------------------------------------
 SERVICES_DATA = {
     "bw_print": {
         "name": "Black-and-White Printing",
@@ -52,10 +49,7 @@ SERVICES_DATA = {
 
 current_filter_category = "all"
 
-
-# --------------------------------------------------------------------------
 # 2. UTILITY & FORMATTING FUNCTIONS
-# --------------------------------------------------------------------------
 def format_pesos(amount):
     """Formats floating point values into Philippine Peso string (e.g. ₱20.00)."""
     return f"₱{amount:,.2f}"
@@ -65,10 +59,7 @@ def get_service_info(service_key):
     """Safely retrieves service object from dictionary with fallback."""
     return SERVICES_DATA.get(service_key, SERVICES_DATA["bw_print"])
 
-
-# --------------------------------------------------------------------------
 # 3. SERVICE SEARCH AND CATEGORY FILTERING
-# --------------------------------------------------------------------------
 def filter_services(category="all"):
     """Filters visible service cards based on category chips."""
     global current_filter_category
@@ -170,9 +161,7 @@ def select_service_action(service_key):
     window.location.hash = "#calculator"
 
 
-# --------------------------------------------------------------------------
 # 4. PRICE CALCULATOR LOGIC
-# --------------------------------------------------------------------------
 def step_quantity(delta):
     """Increments or decrements quantity input in calculator."""
     qty_input = document.getElementById("calc-quantity")
@@ -339,10 +328,8 @@ def transfer_calc_to_order(event=None):
     update_order_live_summary()
     window.location.hash = "#order"
 
-
-# --------------------------------------------------------------------------
 # 5. ORDER REQUEST FORM & DIGITAL RECEIPT MODAL LOGIC
-# --------------------------------------------------------------------------
+# 
 @when("change", "#ord-service")
 def on_ord_service_change(event):
     update_order_live_summary()
