@@ -489,10 +489,7 @@ def reset_order_form_action(event=None):
     
     update_order_live_summary()
 
-
-# --------------------------------------------------------------------------
 # 6. EXPOSE FUNCTIONS TO JS / GLOBAL SCOPE & INITIALIZE
-# --------------------------------------------------------------------------
 window.filter_services = filter_services
 window.reset_service_search = reset_service_search
 window.select_service_action = select_service_action
